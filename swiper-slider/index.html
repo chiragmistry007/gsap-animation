@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <style>
+        *, ::before, ::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .swiper {
+            padding: 10px;
+            border-radius: 4px;
+            background-color: rgb(44, 44, 44);
+        }
+        img {
+            border-radius: 4px;
+            width: 100%;
+        }
+        .card {
+            margin: 10px;
+            border-radius: 4px;
+            padding: 24px;
+            background: #fff;
+            position: relative;
+        }
+        .wrapper {
+            width: 20%;
+            height: 100vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img data-iq-gsap="onStart" data-iq-position-x="-50" data-iq-position-y="0" data-iq-rotate="45" data-iq-scale=".8" src="https://picsum.photos/500" alt="img" class="img">
+                        <h2 data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".4">Hay you</h2>
+                        <p data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".6">Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat.</p>
+                        <button data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".8">Start Now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img data-iq-gsap="onStart" data-iq-position-x="-50" data-iq-position-y="0" data-iq-rotate="45" data-iq-scale=".8" src="https://picsum.photos/500" alt="img" class="img">
+                        <h2 data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".4">Hay you</h2>
+                        <p data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".6">Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat.</p>
+                        <button data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".8">Start Now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img data-iq-gsap="onStart" data-iq-position-x="-50" data-iq-position-y="0" data-iq-rotate="45" data-iq-scale=".8" src="https://picsum.photos/500" alt="img" class="img">
+                        <h2 data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".4">Hay you</h2>
+                        <p data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".6">Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat.</p>
+                        <button data-iq-gsap="onStart" data-iq-position-x="0" data-iq-position-y="50" data-iq-duration="1" data-iq-delay=".8">Start Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
