@@ -132,9 +132,25 @@ gsap.to('#elip', {duration: 2,repeat: -1,yoyo: true, motionPath: {
 }
 })
 
-gsap.set('#text', {xPercent: -0, yPercent: -0, transformOrigin: '50% 50%'})
-gsap.to('#text', {duration: 2,repeat: -1,yoyo: true,  motionPath: {
+gsap.set('#text-1', {xPercent: -50, yPercent: -50, transformOrigin: '50% 50%'})
+gsap.to('#text-1', {duration: 2,repeat: -1,yoyo: true,  motionPath: {
     path: '#elip-path',
     autoRotate: true,
-    align: '#elip'
+    align: '#elip-path'
+}})
+//curve
+
+gsap.set('#text-2', {xPercent: -50, yPercent: -50, transformOrigin: '50% 50%'})
+gsap.to('#text-2', {duration: 4,repeat: -1,  motionPath: {
+    path: '#curve',
+    autoRotate: true,
+    align: '#curve'
+}})
+
+//race-trake
+gsap.set('#text', {xPercent: -50, yPercent: -50, transformOrigin: '50% 50%'})
+gsap.to('#text', {duration: 4,repeat: -1,  motionPath: {
+    path: '#race-trake',
+    autoRotate: true,
+    align: '#race-trake'
 }})
