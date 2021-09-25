@@ -110,20 +110,20 @@ gsap.registerPlugin(MotionPathPlugin)
 
 
 const t1 = gsap.timeline({ defaults: {duration: 2}, repeat: -1, yoyo: true})
-t1.fromTo('#path', { stroke: 'red', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: 'red', strokeDashoffset: '0', strokeLinecap: 'round' })
+t1.fromTo('#path', { stroke: '#0A6FB1', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: '#0A6FB1', strokeDashoffset: '0', strokeLinecap: 'round' })
 // t1.to('#text', {duration: 2, motionPath: {
 //     path: '#path',
 //     autoRotate: true,
 //     align: '#path'
 // }})
 // t1.to('#path', { stroke: 'red', strokeDasharray: 'none', strokeDashoffset: '0' })
-const t2 = gsap.timeline({ defaults: {duration: 2}, repeat: -1, yoyo: true})
-t2.to('#circle', { stroke: '#0A6FB1', strokeDasharray: '40%', strokeWidth: '100%' })
-t2.to('#circle', { strokeDashoffset: '100%', strokeWidth: '0%', opacity: 1 })
+const t2 = gsap.timeline({ defaults: {duration: 2, stroke: '#0A6FB1'}, repeat: -1, yoyo: true})
+t2.to('#circle', { strokeDasharray: '10%', strokeWidth: '80%' })
+t2.to('#circle', { strokeDashoffset: '80%', strokeWidth: '2%', opacity: 1,  })
 
 const t3 = gsap.timeline({ defaults: {duration: 2, }, repeat: -1, yoyo: true})
-t3.fromTo('#elip-path', { stroke: 'red', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: 'red', strokeDashoffset: '0', strokeLinecap: 'round' })
-gsap.fromTo('#circle1', { stroke: 'red', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: 'red', strokeDashoffset: '0' ,strokeLinecap: 'round', repeat: -1, yoyo: true},)
+t3.fromTo('#elip-path', { stroke: '#ffffff', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: '#0A6FB1', strokeDashoffset: '0', strokeLinecap: 'round' })
+gsap.fromTo('#circle1', { stroke: '#ffffff', strokeDasharray: '328%', strokeDashoffset: '328%' }, { stroke: '#0A6FB1', strokeDashoffset: '0' ,strokeLinecap: 'round', repeat: -1, yoyo: true},)
 gsap.set('#elip', {xPercent: -50, yPercent: -50, transformOrigin: '50% 50%'})
 gsap.to('#elip', {duration: 2,repeat: -1,yoyo: true, motionPath: {
     path: '#elip-path',
@@ -149,8 +149,11 @@ gsap.to('#text-2', {duration: 4,repeat: -1,  motionPath: {
 
 //race-trake
 gsap.set('#text', {xPercent: -50, yPercent: -50, transformOrigin: '50% 50%'})
-gsap.to('#text', {duration: 4,repeat: -1,  motionPath: {
+gsap.to('#text', {duration: 4,repeat: -1, ease: 'none',  motionPath: {
     path: '#race-trake',
     autoRotate: true,
     align: '#race-trake'
-}})
+}
+})
+gsap.set('#circle2', {transformOrigin: '50% 50%'})
+gsap.to('#circle2', {rotate: 360, duration: 5, ease: 'none', repeat: -1})
