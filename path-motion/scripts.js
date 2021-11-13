@@ -157,3 +157,30 @@ gsap.to('#text', {duration: 4,repeat: -1, ease: 'none',  motionPath: {
 })
 gsap.set('#circle2', {transformOrigin: '50% 50%'})
 gsap.to('#circle2', {rotate: 360, duration: 5, ease: 'none', repeat: -1})
+
+Array.from(document.querySelectorAll('[data-gsap="motion-path"]'), (elem) => {
+    // elem.getAttribute('data-target')
+    const tim = gsap.timeline({defaults: {
+        xPercent: -50, yPercent: -50, transformOrigin: '50% 50%', 
+        duration: 2,
+    }, repeat: -1, yoyo: true})
+    tim.to(elem.getAttribute('data-target'), {
+        motionPath: {
+            path: elem.getAttribute('data-timeline-target-1'),
+            align: elem.getAttribute('data-target')
+        }
+    })
+    tim.to(elem.getAttribute('data-target'), {
+        motionPath: {
+            path: elem.getAttribute('data-timeline-target-2'),
+            align: elem.getAttribute('data-target')
+        }
+    })
+    tim.to(elem.getAttribute('data-target'), {
+        motionPath: {
+            path: elem.getAttribute('data-timeline-target-3'),
+            align: elem.getAttribute('data-target')
+        }
+    })
+})
+// imgTimeline.to()
